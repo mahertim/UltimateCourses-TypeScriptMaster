@@ -14,10 +14,14 @@ myObj.myMethod();
 
 // Classes
 class MyClass {
-  myMethod() {
+  myInstanceMethod() {
+    console.log('Instance:::', this);
+  }
+  static myClassMethod() {
     console.log('Class:::', this);
   }
 }
 
 const myInstance = new MyClass();
-myInstance.myMethod();
+myInstance.myInstanceMethod();
+MyClass.myClassMethod();
