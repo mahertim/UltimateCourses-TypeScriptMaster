@@ -10,9 +10,9 @@ const myObj = {
 function myFunction(...text: string[]) {
   console.log('Function:::', this, text);
 }
-const bindFunction = myFunction.bind(myObj);
-bindFunction('ABC', 'DEF');
-bindFunction('123', '456');
-bindFunction('ABC', 'DEF');
+const boundFunction = myFunction.bind(myObj);
+boundFunction('ABC', 'DEF');
+boundFunction('123', '456');
+boundFunction('ABC', 'DEF');
 myFunction.call(myObj, 'ABC', 'DEF');
 myFunction.apply(myObj, ['ABC', 'DEF']);
