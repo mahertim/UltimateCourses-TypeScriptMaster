@@ -1,21 +1,22 @@
 class Foo {
-  bar() { }
+  bar() {}
 }
 
-const bar = new Foo();
+const baz = new Foo();
 
-// console.log(bar instanceof Foo);
-// console.log(Object.getPrototypeOf(bar) === Foo.prototype);
+// These check the same thing
+console.log(baz instanceof Foo);
+console.log(Object.getPrototypeOf(baz) === Foo.prototype);
 
 class Song {
-  constructor(public title: string, public duration: number) { }
+  constructor(public title: string, public duration: number) {}
 }
 
 class Playlist {
-  constructor(public name: string, public songs: Song[]) { }
+  constructor(public name: string, public songs: Song[]) {}
 }
 
-function getItemName(item: Song | Playlist) {
+function getItemName(item: Song | Playlist): string {
   if (item instanceof Song) {
     return item.title;
   }
@@ -26,6 +27,9 @@ const songName = getItemName(new Song('Wonderful Wonderful', 300000));
 console.log('Song name:', songName);
 
 const playlistName = getItemName(
-  new Playlist('The Best Songs', [new Song('The Man', 300000)])
+  new Playlist('The Best Songs', [
+    new Song('The Man', 300000),
+    new Song('Anti-Everything', 500000),
+  ]),
 );
 console.log('Playlist name:', playlistName);
