@@ -20,18 +20,26 @@ type CheckoutPayPal = Order & PayPal;
 const order: Order = {
   id: 'xj28s',
   amount: 100,
-  currency: 'USD'
+  currency: 'USD',
 };
+console.log(order);
 
 const orderCard: CheckoutCard = {
   ...order,
   card: '1000 2000 3000 4000',
-  cvc: '123'
+  cvc: '123',
 };
+console.log(orderCard);
 
 const orderPayPal: CheckoutPayPal = {
   ...order,
-  email: 'abc@def.com'
+  email: 'abc@def.com',
 };
+console.log(orderPayPal);
 
-const assigned = Object.assign({}, order, orderCard);
+const stripeCard: Stripe = {
+  card: '1111 2222 3333 4444',
+  cvc: '456',
+};
+const assigned: CheckoutCard = Object.assign({}, order, stripeCard);
+console.log(assigned);
