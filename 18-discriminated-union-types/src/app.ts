@@ -21,29 +21,38 @@ type CheckoutPayPal = Order & PayPal;
 const order: Order = {
   id: 'xj28s',
   amount: 100,
-  currency: 'USD'
+  currency: 'USD',
 };
 
 const orderCard: CheckoutCard = {
   ...order,
   type: 'stripe',
   card: '1000 2000 3000 4000',
-  cvc: '123'
+  cvc: '123',
 };
 
 const orderPayPal: CheckoutPayPal = {
   ...order,
   type: 'paypal',
-  email: 'abc@def.com'
+  email: 'abc@def.com',
 };
 
 type Payload = CheckoutCard | CheckoutPayPal;
 
 function checkout(payload: Payload) {
   if (payload.type === 'stripe') {
-    console.log(payload.card, payload.cvc);
+    console.log(
+      payload.id,
+      payload.amount,
+      payload.currency,
+      payload.card,
+      payload.cvc,
+    );
   }
   if (payload.type === 'paypal') {
-    console.log(payload.email);
+    console.log(payload.id, payload.amount, payload.currency, payload.email);
   }
 }
+
+checkout(orderCard);
+checkout(orderPayPal);
