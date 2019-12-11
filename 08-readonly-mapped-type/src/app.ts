@@ -9,7 +9,7 @@ const person: Person = {
 };
 
 type MyReadonly<T> = {
-  readonly [P in keyof T]: T[P]
+  readonly [P in keyof T]: T[P];
 };
 
 function freeze<T>(obj: T): MyReadonly<T> {
