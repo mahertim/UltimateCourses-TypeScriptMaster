@@ -24,6 +24,6 @@ const songName = getItemName(new Song('Wonderful Wonderful', 300000));
 console.log('Song name:', songName);
 
 const playlistName = getItemName(
-  new Playlist('The Best Songs', [new Song('The Man', 300000)])
+  new Playlist('The Best Songs', [new Song('The Man', 300000)]),
 );
 console.log('Playlist name:', playlistName);
