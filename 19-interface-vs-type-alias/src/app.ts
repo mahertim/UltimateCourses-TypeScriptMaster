@@ -17,5 +17,7 @@ const newArtist: Artist = {
   songs: 5,
   getSongs() {
     return this.songs;
-  }
+  },
 };
+
+console.log(newArtist);
