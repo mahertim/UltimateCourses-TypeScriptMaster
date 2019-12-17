@@ -1,1 +1,1 @@
-function log(message) {}
+function log(message: any) {}
