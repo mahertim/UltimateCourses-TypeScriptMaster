@@ -3,7 +3,7 @@ class Pizza {
 }
 
 class List<T> {
-  private list: T[];
+  private list: T[] = [];
 
   addItem(item: T): void {
     this.list.push(item);
@@ -20,6 +20,8 @@ list.addItem(new Pizza('Pepperoni', 15));
 
 const pizzas = list.getList();
 
+console.log(pizzas);
+
 class Coupon {
   constructor(private name: string) {}
 }
@@ -27,3 +29,7 @@ class Coupon {
 const anotherList = new List<Coupon>();
 
 anotherList.addItem(new Coupon('PIZZA25'));
+
+const coupons = anotherList.getList();
+
+console.log(coupons);
