@@ -4,6 +4,13 @@
     "module": "commonjs",
     "lib": ["dom", "es6"],
     "outDir": "dist",
+
+    // One way to do things
+    // "sourceMap": true,
+    // "inlineSources": true, // optional
+    // "mapRoot": "mappings/map"
+
+    // Other way to do things
     "inlineSourceMap": true,
     "inlineSources": true
   }
