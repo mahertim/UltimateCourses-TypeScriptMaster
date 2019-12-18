@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
+    // includes a default lib which gets wiped out and replaced by our manually defined lib
     "target": "es5",
+    // allowes use of es6 APIs and dom APIs
     "lib": ["es6", "dom"],
     "module": "commonjs",
     "outDir": "dist"
