@@ -3,7 +3,13 @@
     "target": "es5",
     "lib": ["es6", "dom"],
     "module": "commonjs",
-    "importHelpers": true,
-    "outDir": "dist"
+    "outDir": "dist",
+
+    // Reduces emitted file size by relying on functions such as __extends
+    // "noEmitHelpers": true,
+
+    // Import helper functions such as __extends from tslib (tslib must be in package)
+    // Better version of noEmitHelpers because it ensures that the helper functions exist
+    "importHelpers": true
   }
 }
