@@ -5,7 +5,7 @@
     "module": "commonjs",
     "outDir": "dist",
     "strict": true,
-    // all of these
+    // "strict" is shorthand for all of these
     "noImplicitAny": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
