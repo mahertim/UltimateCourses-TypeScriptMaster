@@ -3,11 +3,21 @@
     "target": "es5",
     "lib": ["es6", "dom"],
     "module": "commonjs",
-    "outDir": "dist"
-    // "traceResolution": true
-    // "diagnostics": true
+    "outDir": "dist",
+
+    // Logs module resolution messages so you can see where modules come from
+    // "traceResolution": true,
+
+    // Logs diagnostic info such as compile time
+    // "diagnostics": true,
+
+    // Logs which files are processed
     // "listFiles": true
+
+    // Logs which files are emitted
     // "listEmittedFiles": true
-    // "pretty": true
+
+    // Colorizes and prettifies compile errors
+    "pretty": true
   }
 }
